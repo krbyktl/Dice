@@ -1,10 +1,16 @@
 void setup()
 {
+	size(600,600);
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	for(int x = 0; x < 600; x = x + 100)
+	{
+		Die dice = new Die(x, 300);
+		dice.roll();
+		dice.show();
+	}
 }
 void mousePressed()
 {
@@ -19,7 +25,7 @@ class Die //models one single dice cube
 	}
 	void roll()
 	{
-		//your code here
+		if (Math.random() < )
 	}
 	void show()
 	{
