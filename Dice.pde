@@ -5,30 +5,40 @@ void setup()
 }
 void draw()
 {
-	for(int x = 0; x < 600; x = x + 100)
+	for(int x = 0; x < 600; x = x + 60)
 	{
-		Die dice = new Die(x, 300);
+		dice = new Die(x, 0);
 		dice.roll();
 		dice.show();
+		//if (dice.value < 7)
+		//{
+		//	sum = sum + dice.value;
+		//}
 	}
 }
 void mousePressed()
 {
 	redraw();
 }
-class Die //models one single dice cube
+class Die
 {
-	//variable declarations here
-	Die(int x, int y) //constructor
-	{
-		//variable initializations here
+	//int value;
+	int myX, myY; 
+	Die(int x, int y) 
+	{	
+	`	//value = (int)()	
+		myX = (int)(Math.random()*600);
+		myY = (int)(Math.random()*600);
 	}
 	void roll()
-	{
-		if (Math.random() < )
-	}
+	//{
+		//value = (int)(Math.random()*7);
+		myX = x;
+		myY = y;
+	//}
 	void show()
 	{
-		//your code here
+		rect(myX, myY, 60, 60);
+		ellipse(myX + 30, myY + 30, 10, 10);
 	}
 }
