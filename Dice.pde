@@ -5,15 +5,14 @@ void setup()
 }
 void draw()
 {
-	for(int x = 0; x < 600; x = x + 60)
+	for(int x = 0; x < 600; x = x + 140)
 	{
-		dice = new Die(x, 0);
-		dice.roll();
-		dice.show();
-		//if (dice.value < 7)
-		//{
-		//	sum = sum + dice.value;
-		//}
+    for(int y = 0; y < 600; y = y + 140)
+		 {
+       Die dice = new Die(x+50, y+50);
+		   dice.roll();
+       dice.show();
+      }
 	}
 }
 void mousePressed()
@@ -22,23 +21,60 @@ void mousePressed()
 }
 class Die
 {
-	//int value;
+	int value;
 	int myX, myY; 
 	Die(int x, int y) 
 	{	
-	`	//value = (int)()	
-		myX = (int)(Math.random()*600);
-		myY = (int)(Math.random()*600);
+		roll();
+		myX = x+10;
+		myY = y+10;
 	}
 	void roll()
-	//{
-		//value = (int)(Math.random()*7);
-		myX = x;
-		myY = y;
-	//}
+	{
+		value = (int)(Math.random()*6)+1;
+	}
 	void show()
 	{
 		rect(myX, myY, 60, 60);
-		ellipse(myX + 30, myY + 30, 10, 10);
+    if(value == 1)
+    {
+      ellipse(myX+30, myY+30, 10, 10);
+    }
+    else if(value == 2)
+    {
+      ellipse(myX+10, myY+10, 10, 10);
+      ellipse(myX+50, myY+50, 10, 10);
+    }
+    else if(value == 3)
+    {
+      ellipse(myX+30, myY+30, 10, 10);
+      ellipse(myX+50, myY+10, 10, 10);
+      ellipse(myX+10, myY+50, 10, 10);
+    }
+    else if(value == 4)
+    {
+      ellipse(myX+50, myY+10, 10, 10);
+      ellipse(myX+10, myY+50, 10, 10);
+      ellipse(myX+10, myY+10, 10, 10);
+      ellipse(myX+50, myY+50, 10, 10);
+    }
+    else if(value == 5)
+    {
+      ellipse(myX+50, myY+10, 10, 10);
+      ellipse(myX+10, myY+50, 10, 10);
+      ellipse(myX+10, myY+10, 10, 10);
+      ellipse(myX+50, myY+50, 10, 10);
+      ellipse(myX+30, myY+30, 10, 10);
+    }
+    else if(value == 6)
+    {
+      ellipse(myX+50, myY+10, 10, 10);
+      ellipse(myX+10, myY+50, 10, 10);
+      ellipse(myX+10, myY+10, 10, 10);
+      ellipse(myX+50, myY+50, 10, 10);
+      ellipse(myX+10, myY+30, 10, 10);
+      ellipse(myX+50, myY+30, 10, 10);
+    }
+    
 	}
 }
