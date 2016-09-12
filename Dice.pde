@@ -3,9 +3,11 @@ void setup()
 	size(600,600);
 	background(255,0,0);
 	noLoop();
+	textAlign(CENTER);
 }
 void draw()
-{
+{	
+	int sum = 0;
 	for(int x = 0; x < 600; x = x + 140)
 	{
     for(int y = 0; y < 600; y = y + 140)
@@ -13,13 +15,18 @@ void draw()
     	Die dice = new Die(x+50, y+50);
 		dice.roll();
     	dice.show(); 	
-    	sum = value;
+    	if(dice.value < 7)
+    	{
+    		sum = sum + dice.value;
+    	}
 	}
-	text("The sum is" + sum, 300, 550);
+	}
+	text("The sum is " + sum, 300, 580);
 }
 void mousePressed()
 {
 	redraw();
+
 }
 class Die
 {
