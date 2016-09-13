@@ -1,18 +1,18 @@
 void setup()
 {
-	size(600,600);
-	background(255,0,0);
+	size(620,620);
 	noLoop();
 	textAlign(CENTER);
 }
 void draw()
 {	
+	background(255,0,0);
 	int sum = 0;
-	for(int x = 0; x < 600; x = x + 140)
+	for(int x = 0; x < 600; x = x + 60)
 	{
-    for(int y = 0; y < 600; y = y + 140)
+    for(int y = 0; y < 600; y = y + 60)
 	{
-    	Die dice = new Die(x+50, y+50);
+    	Die dice = new Die(x, y);
 		dice.roll();
     	dice.show(); 	
     	if(dice.value < 7)
@@ -21,7 +21,9 @@ void draw()
     	}
 	}
 	}
-	text("The sum is " + sum, 300, 580);
+	textSize(72);
+	fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255), 175);
+	text("The sum is " + sum, 300, 300);
 }
 void mousePressed()
 {
