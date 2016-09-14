@@ -50,25 +50,25 @@ class Die
 	  rect(myX, myY, 60, 60);
     if(value == 1)
     {
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
 	  ellipse(myX+30, myY+30, 10, 10);
     }
     else if(value == 2)
     {
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
       ellipse(myX+10, myY+10, 10, 10);
       ellipse(myX+50, myY+50, 10, 10);
     }
     else if(value == 3)
     {
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
       ellipse(myX+30, myY+30, 10, 10);
       ellipse(myX+50, myY+10, 10, 10);
       ellipse(myX+10, myY+50, 10, 10);
     }
     else if(value == 4)
     {
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
       ellipse(myX+50, myY+10, 10, 10);
       ellipse(myX+10, myY+50, 10, 10);
       ellipse(myX+10, myY+10, 10, 10);
@@ -76,7 +76,7 @@ class Die
     }
     else if(value == 5)
     {
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
       ellipse(myX+50, myY+10, 10, 10);
       ellipse(myX+10, myY+50, 10, 10);
       ellipse(myX+10, myY+10, 10, 10);
@@ -85,7 +85,7 @@ class Die
     }
     else if(value == 6)
     { 
-      fill(0);
+      fill((int)(Math.random()*255), (int)(Math.random()*255), (int)(Math.random()*255));
       ellipse(myX+50, myY+10, 10, 10);
       ellipse(myX+10, myY+50, 10, 10);
       ellipse(myX+10, myY+10, 10, 10);
